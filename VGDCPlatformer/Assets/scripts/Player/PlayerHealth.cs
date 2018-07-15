@@ -12,10 +12,11 @@ public class PlayerHealth : MonoBehaviour {
 
     public Transform SpawnPoint;
     
-	// Use this for initialization
+	//Use this for initialization
 	void Start () {
 		health = startHealth;
         GameManager.UpdateSpawn(SpawnPoint);
+        gameObject.transform.position = GameManager.spawnPoint.position;
 	}
 	
 	
@@ -36,6 +37,7 @@ public class PlayerHealth : MonoBehaviour {
 
         if(collide.gameObject.tag == "checkPoint")
         {
+            SpawnPoint = collide.transform;
             GameManager.UpdateSpawn(collide.transform);
         }
 	}
