@@ -11,6 +11,9 @@ public class TheEnemy : MonoBehaviour {
 	public float rightBound = 16.0f; //how far to the right to go
 	public float leftBound = 8.0f; //how far to the left to go
 
+	public float enemySpawnX = 15f; //where the enemy will spawn, x coord
+	public float enemySpawnY = -2f; //where the enemy will spawn, y coord
+
 	void Start () {
 		
 	}
@@ -43,7 +46,9 @@ public class TheEnemy : MonoBehaviour {
 		}
 	}
 
-	public void Die(){
+	public void Die()
+	{
+		//object will destroy itself
 		Destroy(gameObject);
 	}
 }
