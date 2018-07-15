@@ -260,6 +260,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 251181638019985266, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+        type: 2}
+      propertyPath: m_UseColliderMask
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291034154303662, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291034154303662, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291034154303662, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291034154303662, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16fcd028eca9ad24c9edf34f2bc824fe, type: 2}
   m_IsPrefabAsset: 0
@@ -296,6 +321,31 @@ Transform:
   m_Father: {fileID: 1963318885}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1581926276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1009107803040676, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 591533915}
+--- !u!50 &1581926277
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581926276}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1649495264
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +412,15 @@ Prefab:
     - target: {fileID: 4724451580023610, guid: ca245e6841e277446968158966a723a1, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 61954830459903912, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283767149882042, guid: ca245e6841e277446968158966a723a1, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
