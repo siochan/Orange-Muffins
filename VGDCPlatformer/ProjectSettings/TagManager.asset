@@ -7,6 +7,8 @@ TagManager:
   - hurtbox
   - hitbox
   - floor
+  - environment
+  - checkPoint
   layers:
   - Default
   - TransparentFX
