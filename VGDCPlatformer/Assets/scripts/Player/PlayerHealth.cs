@@ -20,26 +20,24 @@ public class PlayerHealth : MonoBehaviour {
 		if (collide.gameObject.tag == "hurtbox")
 		{
 			//to kill enemy, we tell the enemy script
-			TheEnemy script = script = collide.gameObject.GetComponentInParent<TheEnemy>();
+			TheEnemy script = collide.gameObject.GetComponentInParent<TheEnemy>();
 			script.Die();
 		}
 
 		if (collide.gameObject.tag == "hitbox")
 		{
 			health--; //player takes damage
-
-			//player dies here
-			if (health <= 0)
-			{
-				//respawn player to beginning
-				transform.position = new Vector3(playerSpawnX, 
-				playerSpawnY, transform.position.z);
-			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		//player dies here
+		if (health <= 0)
+		{
+			//respawn player to beginning
+			transform.position = new Vector3(playerSpawnX, 
+			playerSpawnY, transform.position.z);
+		}
 	}
 }
