@@ -15,10 +15,10 @@ public class DamageOnTouch : MonoBehaviour {
 	}
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
+        //if this object touches an enemy's hurtbox
         if (collision.gameObject.tag == "hurtbox")
         {
-            //to kill enemy, we tell the enemy script
+            //to kill enemy, we call enemy script Die() function to kill object
             TheEnemy script = collision.gameObject.GetComponentInParent<TheEnemy>();
             script.Die();
         }
