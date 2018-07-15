@@ -10,8 +10,8 @@ public class TheEnemy : MonoBehaviour {
 	public float movSpeed = 2.5f; //movement of the enemy
 	
 
-    public Transform positionA;
-    public Transform positionB;
+    public Transform positionA; //gameObject that holds the left boundary
+    public Transform positionB; //gameObject that holds the right boundary
 
     void Start () {
 		
@@ -19,6 +19,7 @@ public class TheEnemy : MonoBehaviour {
 
 	
 	// Update is called once per frame
+	// specifically we update movement on game object
 	void Update () {
 		//enemy will move to the right
 		if (movRight)
@@ -32,18 +33,12 @@ public class TheEnemy : MonoBehaviour {
 			transform.Translate(Vector2.left * movSpeed * Time.deltaTime);
 		}
 
-		//enemy moves left until reaching leftboundary
-		if (transform.position.x >= positionA.position.x) 
+		//enemy moves until reaching a boundary (whether left or right)
+		//then we will flip the gameObject
+		if (transform.position.x >= positionA.position.x ||
+		transform.position.x < positionB.position.x) 
 		{
 			Flip();
-			//movRight = false;
-		}
-		
-		//enemy moves right until reaching rightboundary
-		if (transform.position.x < positionB.position.x)
-		{
-			Flip();
-			//movRight = true;
 		}
 	}
 
@@ -55,10 +50,11 @@ public class TheEnemy : MonoBehaviour {
 
 	void Flip()
     {
+		//flips the entire gameObject (collider, sprite, etc.)
         movRight = !movRight;
 
         Vector2 localScale = gameObject.transform.localScale;
-        localScale.x *= -1;
+        localScale.x *= -1; //flips object using transform on x position
         transform.localScale = localScale;
     }
 }
