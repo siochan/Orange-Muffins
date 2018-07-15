@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hurtbox
   - hitbox
+  - floor
   layers:
   - Default
   - TransparentFX
