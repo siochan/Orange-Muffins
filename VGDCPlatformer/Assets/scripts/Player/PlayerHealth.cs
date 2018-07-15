@@ -42,4 +42,8 @@ public class PlayerHealth : MonoBehaviour {
 			health = startHealth;
 		}
 	}
+
+	public void TakeDamage(){
+		health--;
+	}
 }

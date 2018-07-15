@@ -32,17 +32,26 @@ public class evironmentDanger : MonoBehaviour {
 		}
 	}
 
+	public void playerTrigger()
+	{
+		//gives the environment object gravity to
+		body.bodyType = RigidbodyType2D.Dynamic;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		//environment will check (below at the moment) and move when detecting player
-		RaycastHit hit;
 
-		if (Physics.SphereCast(transform.position, 1, transform.forward, out hit, 10))
-		{
-			if (hit.collider.CompareTag("Player"))
-			{
-				body.bodyType = RigidbodyType2D.Dynamic;
-			}
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20);
+		
+		if(hit.collider.gameObject.CompareTag("Player")){
+			body.bodyType = RigidbodyType2D.Dynamic;	
+
 		}
+		
+
+	
 	}
+
+	
 }
