@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour {
 
-    private void OnCollisionEnter2D(Collider2D collision)
+   
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            //collision.GetComponent<Collider>().transform.SetParent(transform);
+            Debug.Log("wow");
+            collision.collider.transform.SetParent(transform);
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.collider.transform.SetParent(null);
         }
     }
 }
