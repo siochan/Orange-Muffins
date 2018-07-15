@@ -8,10 +8,12 @@ public class TheEnemy : MonoBehaviour {
 
 	public bool movRight = false; //checks if the enemy moves right or left
 	public float movSpeed = 2.5f; //movement of the enemy
-	public float rightBound = 16.0f; //how far to the right to go
-	public float leftBound = 8.0f; //how far to the left to go
+	
 
-	void Start () {
+    public Transform positionA;
+    public Transform positionB;
+
+    void Start () {
 		
 	}
 
@@ -31,14 +33,14 @@ public class TheEnemy : MonoBehaviour {
 		}
 
 		//enemy moves left until reaching leftboundary
-		if (transform.position.x >= rightBound) 
+		if (transform.position.x >= positionA.position.x) 
 		{
 			Flip();
 			//movRight = false;
 		}
 		
 		//enemy moves right until reaching rightboundary
-		if (transform.position.x < leftBound)
+		if (transform.position.x < positionB.position.x)
 		{
 			Flip();
 			//movRight = true;
