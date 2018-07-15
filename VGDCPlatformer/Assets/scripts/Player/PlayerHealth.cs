@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -9,9 +10,11 @@ public class PlayerHealth : MonoBehaviour {
 	public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
 	public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
+    public Transform SpawnPoint;
 	// Use this for initialization
 	void Start () {
 		health = startHealth;
+        transform.position = SpawnPoint.position;
 	}
 	
 	
@@ -29,6 +32,11 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			health--; //player takes damage
 		}
+
+        if(collide.gameObject.tag == "checkPoint")
+        {
+            SpawnPoint = collide.transform;
+        }
 	}
 
 	// Update is called once per frame
@@ -36,14 +44,14 @@ public class PlayerHealth : MonoBehaviour {
 		//player dies here
 		if (health <= 0)
 		{
-			//respawn player to beginning
-			transform.position = new Vector3(playerSpawnX, 
-			playerSpawnY, transform.position.z);
-			health = startHealth;
+            //restarts level
+            SceneManager.LoadScene("SampleScene");
+            
 		}
 	}
 
 	public void TakeDamage(){
 		health--;
 	}
+
 }
