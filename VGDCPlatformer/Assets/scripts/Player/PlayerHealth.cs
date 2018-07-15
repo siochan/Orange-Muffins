@@ -13,8 +13,9 @@ public class PlayerHealth : MonoBehaviour {
 		
 	}
 	
+	
 	//will occur when player interacts with Enemy object
-	void OnCollisionEnter2D (Collision2D collide)
+	void OnTriggerEnter2D (Collider2D collide)
 	{
 		if (collide.gameObject.tag == "hurtbox")
 		{
