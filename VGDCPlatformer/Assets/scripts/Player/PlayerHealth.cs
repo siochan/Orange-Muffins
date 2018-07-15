@@ -17,14 +17,14 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		if (collide.gameObject.tag == "hurtbox")
 		{
-			Debug.Log("NICE!");
-			Destroy(collide.gameObject); //destroy the enemy object
+			TheEnemy script = collide.gameObject.GetComponentInParent<TheEnemy>();
+			script.Die();
 		}
 
-		if (collide.gameObject.tag == "slimeHitBox")
+		if (collide.gameObject.tag == "hitbox")
 		{
 			health--; //player takes damage
-			Debug.Log("OH NO!");
+
 			//player dies here
 			if (health <= 0)
 			{
