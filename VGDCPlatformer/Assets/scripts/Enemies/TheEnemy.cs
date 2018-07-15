@@ -42,4 +42,8 @@ public class TheEnemy : MonoBehaviour {
 			movRight = true;
 		}
 	}
+
+	public void Die(){
+		Destroy(gameObject);
+	}
 }
