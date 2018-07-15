@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public int health = 1; //the amount of health the player has, at 0 player dies
-	public float spawnX = -17.3f; //where the player spawns at start or death, X coord
-	public float spawnY = -1.9f; //where the player spawns at start or death, Y coord
+	public int startHealth = 1; //the amount of health the player is suppose to start with
+	public int health; //the amount of health the player has, at 0 player dies
+	public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
+	public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
+
 	// Use this for initialization
 	void Start () {
-		
+		health = startHealth;
 	}
 	
+	
 	//will occur when player interacts with Enemy object
-	void OnCollisionEnter2D (Collision2D collide)
+	void OnTriggerEnter2D (Collider2D collide)
 	{
 		if (collide.gameObject.tag == "hurtbox")
 		{
+			//to kill enemy, we tell the enemy script
 			TheEnemy script = collide.gameObject.GetComponentInParent<TheEnemy>();
 			script.Die();
 		}
@@ -24,17 +28,18 @@ public class PlayerHealth : MonoBehaviour {
 		if (collide.gameObject.tag == "hitbox")
 		{
 			health--; //player takes damage
-
-			//player dies here
-			if (health <= 0)
-			{
-				transform.position = new Vector3(spawnX, spawnY, transform.position.z);
-			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		//player dies here
+		if (health <= 0)
+		{
+			//respawn player to beginning
+			transform.position = new Vector3(playerSpawnX, 
+			playerSpawnY, transform.position.z);
+			health = startHealth;
+		}
 	}
 }
