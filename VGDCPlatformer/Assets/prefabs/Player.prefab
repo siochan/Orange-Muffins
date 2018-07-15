@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4724451580023610}
   - component: {fileID: 212829955396939446}
   - component: {fileID: 114643579849431498}
+  - component: {fileID: 114842849280027526}
   - component: {fileID: 61954830459903912}
   - component: {fileID: 50807985043141556}
   m_Layer: 0
@@ -180,6 +181,20 @@ MonoBehaviour:
   onDive: 0
   diveCoolDown: 1
   timetrack: 0
+--- !u!114 &114842849280027526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283767149882042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc5796e4f475c24ca53110d404e9ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  playerSpawnX: -17.3
+  playerSpawnY: -1.9
 --- !u!212 &212829955396939446
 SpriteRenderer:
   m_ObjectHideFlags: 1
