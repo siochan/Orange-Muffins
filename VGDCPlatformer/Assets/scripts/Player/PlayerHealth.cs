@@ -7,14 +7,15 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startHealth = 1; //the amount of health the player is suppose to start with
 	public int health; //the amount of health the player has, at 0 player dies
-	public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
-	public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
+	//public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
+	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
     public Transform SpawnPoint;
+    
 	// Use this for initialization
 	void Start () {
 		health = startHealth;
-        transform.position = SpawnPoint.position;
+        GameManager.UpdateSpawn(SpawnPoint);
 	}
 	
 	
@@ -35,7 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 
         if(collide.gameObject.tag == "checkPoint")
         {
-            SpawnPoint = collide.transform;
+            GameManager.UpdateSpawn(collide.transform);
         }
 	}
 

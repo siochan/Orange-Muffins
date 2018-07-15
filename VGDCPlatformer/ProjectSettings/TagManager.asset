@@ -8,6 +8,7 @@ TagManager:
   - hitbox
   - floor
   - environment
+  - checkPoint
   layers:
   - Default
   - TransparentFX
