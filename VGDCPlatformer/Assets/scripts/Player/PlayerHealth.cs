@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
 	public int health = 1; //the amount of health the player has, at 0 player dies
-	public float spawnX = -17.3f; //where the player spawns at start or death, X coord
-	public float spawnY = -1.9f; //where the player spawns at start or death, Y coord
+	public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
+	public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,7 +18,8 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		if (collide.gameObject.tag == "hurtbox")
 		{
-			TheEnemy script = collide.gameObject.GetComponentInParent<TheEnemy>();
+			//to kill enemy, we tell the enemy script
+			TheEnemy script = script = collide.gameObject.GetComponentInParent<TheEnemy>();
 			script.Die();
 		}
 
@@ -28,7 +30,9 @@ public class PlayerHealth : MonoBehaviour {
 			//player dies here
 			if (health <= 0)
 			{
-				transform.position = new Vector3(spawnX, spawnY, transform.position.z);
+				//respawn player to beginning
+				transform.position = new Vector3(playerSpawnX, 
+				playerSpawnY, transform.position.z);
 			}
 		}
 	}
