@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
 	public int startHealth = 1; //the amount of health the player is suppose to start with
-	private int health; //the amount of health the player has, at 0 player dies
+	public int health; //the amount of health the player has, at 0 player dies
 	public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
 	public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
