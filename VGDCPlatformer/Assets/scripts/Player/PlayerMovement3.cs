@@ -13,7 +13,7 @@ public class PlayerMovement3 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Vector2 movement= new Vector2( Input.GetAxisRaw("Horizontal"),0f);
 		_characterController.move(movement*.01f+Physics2D.gravity*Time.deltaTime);
 	}
