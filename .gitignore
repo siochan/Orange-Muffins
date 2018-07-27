@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+VGDCPlatformer/.vscode/launch.json
+VGDCPlatformer/.vscode/settings.json
