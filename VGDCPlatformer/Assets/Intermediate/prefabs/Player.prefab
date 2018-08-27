@@ -35,7 +35,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4724451580023610}
   - component: {fileID: 212829955396939446}
-  - component: {fileID: 114643579849431498}
   - component: {fileID: 114842849280027526}
   - component: {fileID: 61954830459903912}
   - component: {fileID: 58663913960040490}
@@ -123,7 +122,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &58663913960040490
 CircleCollider2D:
@@ -133,13 +132,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 1283767149882042}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a177032af699de74c9c399593cc31ed2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   serializedVersion: 2
-  m_Radius: 0.535
+  m_Radius: 0.33
 --- !u!61 &61954830459903912
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -165,40 +164,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.07, y: 0.515513}
   m_EdgeRadius: 0
---- !u!114 &114643579849431498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283767149882042}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8aca69c7815684f9781dad89b1f28d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 9
-  fallGravity: 4
-  lowJumpGravity: 4
-  facingRight: 0
-  moveX: 0
-  jumpsLeft: 0
-  maxJumps: 1
-  divePower: 5
-  grounded: 0
-  groundCheck: {fileID: 4307224805656752}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  onWall: 0
-  wallCheck: {fileID: 4389550286538764}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  wallSliding: 0
-  onDive: 0
-  diveCoolDown: 1
-  timetrack: 0
 --- !u!114 &114732015578524942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f217c403e0d4d540a9af7233629e721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 20
+  runSpeed: 40
   controller: {fileID: 114756675746613300}
 --- !u!114 &114756675746613300
 MonoBehaviour:
@@ -232,7 +197,7 @@ MonoBehaviour:
     m_Bits: 256
   m_GroundCheck: {fileID: 4307224805656752}
   m_HorizontalCheck: {fileID: 0}
-  m_AirControl: 0
+  m_AirControl: 1
   m_RigidBody2D: {fileID: 0}
   m_FacingRight: 1
   m_Damaged: 0
