@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TheEnemy : MonoBehaviour {
 
-	// Use this for initialization
-
 	public bool movRight = false; //checks if the enemy moves right or left
 	public float movSpeed = 2.5f; //movement of the enemy
 	
@@ -13,13 +11,8 @@ public class TheEnemy : MonoBehaviour {
     public Transform positionA; //gameObject that holds the left boundary
     public Transform positionB; //gameObject that holds the right boundary
 
-    void Start () {
-		
-	}
-
 	
 	// Update is called once per frame
-	// specifically we update movement on game object
 	void Update () {
 		//enemy will move to the right
 		if (movRight)
@@ -50,7 +43,7 @@ public class TheEnemy : MonoBehaviour {
 
 	void Flip()
     {
-		//flips the entire gameObject (collider, sprite, etc.)
+		//flips the entire gameObject and its components
         movRight = !movRight;
 
         Vector2 localScale = gameObject.transform.localScale;
