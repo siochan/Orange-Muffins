@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class TheEnemy : MonoBehaviour {
 
-	public bool movRight = false; //checks if the enemy moves right or left
+	public bool moveRight = false; //checks if the enemy moves right or left
 	public float movSpeed = 2.5f; //movement of the enemy
 	
+    //Patrol Positions
+    public Transform positionA;
+    public Transform positionB;
 
-    public Transform positionA; //gameObject that holds the left boundary
-    public Transform positionB; //gameObject that holds the right boundary
+    public GameObject parent;
 
 	
 	// Update is called once per frame
 	void Update () {
-		//enemy will move to the right
-		if (movRight)
+		
+		if (moveRight == true)
 		{
 			transform.Translate(Vector2.right * movSpeed * Time.deltaTime);
 		}
 
-		//enemy will move to the left
 		else
 		{
 			transform.Translate(Vector2.left * movSpeed * Time.deltaTime);
 		}
 
-		//enemy moves until reaching a boundary (whether left or right)
-		//then we will flip the gameObject
+		//enemy moves until reaching a boundary, then we will flip the gameObject
 		if (transform.position.x >= positionA.position.x ||
 		transform.position.x < positionB.position.x) 
 		{
@@ -35,19 +35,18 @@ public class TheEnemy : MonoBehaviour {
 		}
 	}
 
+    //Destroys the GameObject
 	public void Die()
 	{
-		//object will destroy itself
-		Destroy(gameObject);
+		Destroy(parent);
 	}
 
-	void Flip()
+    //flips the entire gameObject and its components
+    void Flip()
     {
-		//flips the entire gameObject and its components
-        movRight = !movRight;
-
+        moveRight = !moveRight;
         Vector2 localScale = gameObject.transform.localScale;
-        localScale.x *= -1; //flips object using transform on x position
+        localScale.x *= -1;
         transform.localScale = localScale;
     }
 }
