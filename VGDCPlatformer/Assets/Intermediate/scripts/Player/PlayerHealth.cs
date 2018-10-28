@@ -11,10 +11,12 @@ public class PlayerHealth : MonoBehaviour {
 	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
     public Transform SpawnPoint;
-    
+    //public Vector3 respawnPoint;
+
 	//Use this for initialization
 	void Start () {
 		health = startHealth;
+        //respawnPoint = transform.position;
         GameManager.UpdateSpawn(SpawnPoint);
         gameObject.transform.position = GameManager.spawnPoint.position;
 	}
@@ -39,6 +41,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             SpawnPoint = collide.transform;
             GameManager.UpdateSpawn(collide.transform);
+            //respawnPoint = collide.transform.position;
         }
 	}
 
@@ -47,6 +50,7 @@ public class PlayerHealth : MonoBehaviour {
 		//player dies here
 		if (health <= 0)
 		{
+            //transform.position = respawnPoint;
             //restarts level
             SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
             
