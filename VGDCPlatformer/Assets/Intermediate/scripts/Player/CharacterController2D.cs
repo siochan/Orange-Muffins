@@ -12,6 +12,11 @@ public class CharacterController2D : MonoBehaviour {
     [SerializeField] private Transform m_GroundCheck;
     [SerializeField] private Transform m_HorizontalCheck;
     [SerializeField] private bool m_AirControl = false;
+    [SerializeField] private float m_JumpForceOnEnemies = 20;       //The bigger the number the higher you go
+    //[SerializeField] private float m_JumpForceOnTrampoline = 30;
+    //[SerializeField] public int m_WaterRejectX = 20;
+    //[SerializeField] public int m_WaterRejectY = 5;
+
 
 
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
@@ -113,11 +118,18 @@ public class CharacterController2D : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collide)
     {
-        if (collide.gameObject.tag == "hurtBox" && this.gameObject.transform.position.y - collide.gameObject.transform.position.y >= 0)
+        if (collide.gameObject.tag == "hurtbox" && this.gameObject.transform.position.y - collide.gameObject.transform.position.y >= 0)
         {
-            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, 25);
+            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, m_JumpForceOnEnemies);
         }
-
+        /*if(collide.gameObject.tag == "water")
+        {
+            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x - m_WaterRejectX, m_WaterRejectY);
+        }*/
+        /*if (collide.gameObject.tag == "trampoline" && this.gameObject.transform.position.y - collide.gameObject.transform.position.y >= 0)
+        {
+            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, m_JumpForceOnTrampoline);
+        }*/
     }
 
 

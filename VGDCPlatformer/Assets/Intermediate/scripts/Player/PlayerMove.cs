@@ -9,6 +9,14 @@ public class PlayerMove : MonoBehaviour {
     bool jump = false;
     public CharacterController2D controller;
 
+    [Header("Shoot Logic")]
+    // Shooting Logic
+    public GameObject rightPellet;
+    public GameObject leftPellet;
+    public Transform firePos;
+    public float fireRate = 0.5f;
+    private float nextFire = 0;
+
     void Start()
     {
 
@@ -22,6 +30,12 @@ public class PlayerMove : MonoBehaviour {
         {
             jump = true;
         }
+
+        if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            fire();
+        }
     }
 
     private void FixedUpdate()
@@ -30,4 +44,15 @@ public class PlayerMove : MonoBehaviour {
         jump = false;
     }
 
+    void fire()
+    {
+        if(controller.m_FacingRight)
+        {
+            Instantiate(rightPellet, firePos.position, Quaternion.identity);
+        }
+        else if(!controller.m_FacingRight)
+        {
+            Instantiate(leftPellet, firePos.position, Quaternion.identity);
+        }
+    }
 }
