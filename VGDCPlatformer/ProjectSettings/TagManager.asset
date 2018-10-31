@@ -9,6 +9,8 @@ TagManager:
   - floor
   - environment
   - checkPoint
+  - sap
+  - water
   layers:
   - Default
   - TransparentFX
