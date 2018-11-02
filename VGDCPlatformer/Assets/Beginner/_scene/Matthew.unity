@@ -1520,12 +1520,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224839427332565050, guid: 76741b205190cc64f84bc1695cd66b43,
     type: 2}
   m_PrefabInternal: {fileID: 771313448}
---- !u!114 &494751083 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114169004803234948, guid: 76741b205190cc64f84bc1695cd66b43,
-    type: 2}
-  m_PrefabInternal: {fileID: 771313448}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &517928178
 GameObject:
   m_ObjectHideFlags: 0
@@ -23613,11 +23607,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
-        type: 2}
-      propertyPath: countText
-      value: 
-      objectReference: {fileID: 494751083}
     - target: {fileID: 1283767149882042, guid: ca245e6841e277446968158966a723a1, type: 2}
       propertyPath: m_Name
       value: Player(Advance)
