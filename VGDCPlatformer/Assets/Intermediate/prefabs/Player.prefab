@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 40
   controller: {fileID: 114756675746613300}
-  countText: {fileID: 114169004803234948, guid: 76741b205190cc64f84bc1695cd66b43,
+  countText: {fileID: 114713260171315640, guid: 2446b14ba5500b242a0937491b034d98,
     type: 2}
   rightPellet: {fileID: 1301729343323688, guid: 17f5d03e2b37b7143b93bfc779c80f99,
     type: 2}
