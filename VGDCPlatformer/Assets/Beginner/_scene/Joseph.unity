@@ -23464,6 +23464,15 @@ Prefab:
       propertyPath: firePos
       value: 
       objectReference: {fileID: 1139849408}
+    - target: {fileID: 4587998182459142, guid: ca245e6841e277446968158966a723a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756675746613300, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: m_AirJumps
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0
@@ -25469,7 +25478,7 @@ GameObject:
   - component: {fileID: 2110261947}
   - component: {fileID: 2110261950}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Sap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25570,7 +25579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74897e4eb6facce4cbc65ad40126d617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reducedSpeed: 1
+  reducedSpeed: 5
+  reduceJumpPower: 300
 --- !u!1001 &2134844915
 Prefab:
   m_ObjectHideFlags: 0
