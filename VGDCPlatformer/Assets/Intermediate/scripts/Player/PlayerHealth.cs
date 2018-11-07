@@ -51,6 +51,7 @@ public class PlayerHealth : MonoBehaviour {
 		if (health <= 0)
 		{
             //transform.position = respawnPoint;
+            //health = startHealth;
             //restarts level
             SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
             

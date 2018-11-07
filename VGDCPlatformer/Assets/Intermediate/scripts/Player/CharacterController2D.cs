@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterController2D : MonoBehaviour {
 
     [SerializeField] public float m_JumpForce = 800f;
-    [SerializeField] public int m_AirJumps = 0;
+    [SerializeField] public int m_AirJumps = 1;
     [SerializeField] private float m_FallGravity = 4f;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private LayerMask m_GroundLayer;
