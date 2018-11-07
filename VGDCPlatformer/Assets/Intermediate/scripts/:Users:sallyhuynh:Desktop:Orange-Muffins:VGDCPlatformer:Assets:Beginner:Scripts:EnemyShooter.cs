@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class EnemyShooter : MonoBehaviour
 {
 
     public float speed;
