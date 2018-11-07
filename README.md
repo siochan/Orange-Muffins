@@ -1,2 +1,0 @@
-# PlatformGame
-VGDC Platform Game
