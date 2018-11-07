@@ -1012,11 +1012,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 245077061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096493886e848c8478e6361fc1a574f5, type: 3}
+  m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  range: 4
+  range: 5
 --- !u!50 &245077065
 Rigidbody2D:
   serializedVersion: 4
@@ -1974,6 +1974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 40
   controller: {fileID: 700163356}
+  countText: {fileID: 0}
   rightPellet: {fileID: 0}
   leftPellet: {fileID: 0}
   firePos: {fileID: 0}

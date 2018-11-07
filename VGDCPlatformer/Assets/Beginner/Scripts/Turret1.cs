@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class Turret1 : MonoBehaviour
 {
 
-    public float speed;
+    public float speed; 
 
     private float timeBtShots;
     public float startTimeBtShots;
