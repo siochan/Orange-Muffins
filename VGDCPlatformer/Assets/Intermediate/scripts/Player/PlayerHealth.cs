@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour {
 	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
     public Transform SpawnPoint;
-    //public Vector3 respawnPoint;
+    //public Vector2 respawnPoint;
 
 	//Use this for initialization
 	void Start () {

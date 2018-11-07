@@ -9,6 +9,9 @@ TagManager:
   - floor
   - environment
   - checkPoint
+  - sap
+  - water
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -51,6 +54,9 @@ TagManager:
     locked: 0
   - name: Level
     uniqueID: 1890391441
+    locked: 0
+  - name: Pickup
+    uniqueID: 772384465
     locked: 0
   - name: ForeGround
     uniqueID: 3930697077
