@@ -33,11 +33,11 @@ public class EnemyFollow : MonoBehaviour
             GetComponent<Rigidbody2D>().MovePosition(Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime));
             GetComponent<Rigidbody2D>().velocity = new Vector2();
         }
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Bullet")
+        if (other.tag == "Bullet")
         {
             Destroy(gameObject);
         }
