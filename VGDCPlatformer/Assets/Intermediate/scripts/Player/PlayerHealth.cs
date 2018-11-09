@@ -61,7 +61,6 @@ public class PlayerHealth : MonoBehaviour {
 		//player dies here
 		if (health <= 0)
 		{
-            levelManager.reloadLevel();     // invoke reloadLevel() from levelManager for a delay before scene load
             gameObject.SetActive(false);    // kills player
         }
 	}

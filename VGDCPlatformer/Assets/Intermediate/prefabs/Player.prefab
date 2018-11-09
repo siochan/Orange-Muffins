@@ -50,13 +50,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4724451580023610}
   - component: {fileID: 212829955396939446}
-  - component: {fileID: 114842849280027526}
   - component: {fileID: 61954830459903912}
   - component: {fileID: 58663913960040490}
   - component: {fileID: 50807985043141556}
   - component: {fileID: 114756675746613300}
   - component: {fileID: 114732015578524942}
-  - component: {fileID: 114419059074478698}
+  - component: {fileID: 114713798114865090}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -125,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283767149882042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.8953953, y: -1.3127408, z: -0.111328125}
+  m_LocalPosition: {x: -6.906, y: -4.487, z: -0.111328125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4307224805656752}
@@ -194,7 +193,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50015545, y: 0.515513}
   m_EdgeRadius: 0
---- !u!114 &114419059074478698
+--- !u!114 &114713798114865090
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,6 +222,7 @@ MonoBehaviour:
   controller: {fileID: 114756675746613300}
   countText: {fileID: 114713260171315640, guid: 2446b14ba5500b242a0937491b034d98,
     type: 2}
+  muffinCount: 0
   rightPellet: {fileID: 1301729343323688, guid: 17f5d03e2b37b7143b93bfc779c80f99,
     type: 2}
   leftPellet: {fileID: 1242968481148856, guid: fcd8eb812c47adb4db804dffd6ea5715, type: 2}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 800
-  m_AirJumps: 0
+  m_AirJumps: 1
   m_FallGravity: 4
   m_MovementSmoothing: 0.05
   m_GroundLayer:
@@ -254,20 +254,6 @@ MonoBehaviour:
   m_FacingRight: 1
   m_Damaged: 0
   m_Immune: 0
---- !u!114 &114842849280027526
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283767149882042}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc5796e4f475c24ca53110d404e9ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHealth: 1
-  health: 1
-  SpawnPoint: {fileID: 0}
 --- !u!212 &212829955396939446
 SpriteRenderer:
   m_ObjectHideFlags: 1
