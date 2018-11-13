@@ -11,11 +11,11 @@ public class Turret1 : MonoBehaviour
     public float startTimeBtShots;
 
     public GameObject projectile;
-    private Transform player;
+    //private Transform player;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+       //player = GameObject.FindGameObjectWithTag("Player").transform;
 
         timeBtShots = startTimeBtShots;
     }
