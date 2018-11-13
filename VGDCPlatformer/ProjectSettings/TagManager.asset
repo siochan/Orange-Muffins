@@ -12,6 +12,7 @@ TagManager:
   - sap
   - water
   - Pickup
+  - Level Pickup
   layers:
   - Default
   - TransparentFX

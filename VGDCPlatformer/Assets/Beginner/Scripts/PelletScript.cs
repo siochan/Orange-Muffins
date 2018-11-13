@@ -29,7 +29,7 @@ public class PelletScript : MonoBehaviour
     // Function will be called when pellet collides with another collision box
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);  // conosle logs what the pellet hit
+        //Debug.Log(collision.name);  // conosle logs what the pellet hit
 
         Destroy(gameObject);
 

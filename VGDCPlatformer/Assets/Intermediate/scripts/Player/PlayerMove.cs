@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour {
 
     [Header("Pickup HUD")]
     public Text countText;
-    private int count;
+    public int muffinCount;
 
     [Header("Shoot Logic")]
     // Shooting Logic
@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour {
 
     void Start()
     {
-        count = 0;
+        muffinCount = 0;
         SetCountText();
     }
 
@@ -57,7 +57,7 @@ public class PlayerMove : MonoBehaviour {
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
-            ++count;
+            ++muffinCount;
             SetCountText();
         }
     }
@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour {
     void SetCountText()
     {
         //Set the text property of our our countText object to "Count: " followed by the number stored in our count variable.
-        countText.text = "Muffins: " + count.ToString();
+        countText.text = "Muffins: " + muffinCount.ToString();
     }
 
     void fire()

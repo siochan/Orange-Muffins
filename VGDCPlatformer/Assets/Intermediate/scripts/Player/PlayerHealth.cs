@@ -7,16 +7,26 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startHealth = 1; //the amount of health the player is suppose to start with
 	public int health; //the amount of health the player has, at 0 player dies
+
+    private GameObject gameManager;
+    private LevelManager levelManager;
+
 	//public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
 	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
     public Transform SpawnPoint;
+
     //public Vector2 respawnPoint;
 
 	//Use this for initialization
 	void Start () {
+        gameManager = GameObject.Find("GameManager");
+        levelManager = gameManager.GetComponent<LevelManager>();
+
 		health = startHealth;
+
         //respawnPoint = transform.position;
+
         GameManager.UpdateSpawn(SpawnPoint);
         gameObject.transform.position = GameManager.spawnPoint.position;
 	}
@@ -41,6 +51,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             SpawnPoint = collide.transform;
             GameManager.UpdateSpawn(collide.transform);
+
             //respawnPoint = collide.transform.position;
         }
 	}
@@ -50,16 +61,11 @@ public class PlayerHealth : MonoBehaviour {
 		//player dies here
 		if (health <= 0)
 		{
-            //transform.position = respawnPoint;
-            //health = startHealth;
-            //restarts level
-            SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
-            
-		}
+            gameObject.SetActive(false);    // kills player
+        }
 	}
 
 	public void TakeDamage(){
 		health--;
 	}
-
 }
