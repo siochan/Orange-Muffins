@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50480842389116984}
   - component: {fileID: 58662590368069052}
   - component: {fileID: 114264681555160500}
+  - component: {fileID: 114249399997978550}
   m_Layer: 0
   m_Name: Left Pellet
   m_TagString: Untagged
@@ -78,6 +79,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114249399997978550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242968481148856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24150e7c06e5e174db2b45abccf2044c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114264681555160500
 MonoBehaviour:
   m_ObjectHideFlags: 1
