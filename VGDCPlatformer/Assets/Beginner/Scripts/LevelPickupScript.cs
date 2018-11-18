@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelPickupScript : MonoBehaviour
 {
-    private int scenceIndex;
+    private int sceneIndex;
     private int count;
     private int mod;
 
     void Start()
     {
-        scenceIndex = SceneManager.GetActiveScene().buildIndex;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         mod = 1;
         count = 45;
     }
@@ -48,7 +48,8 @@ public class LevelPickupScript : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -5));
             yield return new WaitForSeconds(0.01f);
         }
-        SceneManager.LoadScene(scenceIndex, LoadSceneMode.Single);
+        sceneIndex++;
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         UnityEngine.Time.timeScale = 1f;
         yield return 0;
     }
