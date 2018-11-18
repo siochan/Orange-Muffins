@@ -48,7 +48,7 @@ public class LevelPickupScript : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -5));
             yield return new WaitForSeconds(0.01f);
         }
-        SceneManager.LoadScene(nextSceneToLoad, LoadSceneMode.Single);
+        SceneManager.LoadScene(scenceIndex, LoadSceneMode.Single);
         UnityEngine.Time.timeScale = 1f;
         yield return 0;
     }
