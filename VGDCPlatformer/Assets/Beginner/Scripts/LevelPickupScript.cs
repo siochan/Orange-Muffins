@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelPickupScript : MonoBehaviour
 {
-    public string nextSceneToLoad;
+    private int scenceIndex;
     private int count;
     private int mod;
 
     void Start()
     {
+        scenceIndex = SceneManager.GetActiveScene().buildIndex;
         mod = 1;
         count = 45;
     }
