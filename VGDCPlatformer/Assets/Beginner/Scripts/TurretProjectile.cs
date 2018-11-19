@@ -12,9 +12,6 @@ public class TurretProjectile : MonoBehaviour
 
     void Start()
     {
-
-        //target = GameObject.FindGameObjectWithTag("Player").transform;
-
         direction = new Vector2(target.position.x, target.position.y);
     }
 
@@ -23,33 +20,26 @@ public class TurretProjectile : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, direction, speed * Time.deltaTime);
 
-        /*
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-            DestroyProjectile();
-        }
-        */
     }
 
-    /*
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        Destroy(gameObject);
+
+        if (collision.CompareTag("Player"))
         {
-            DestroyProjectile();
+            Destroy(gameObject);
 
         }
     }
 
-    void DestroyProjectile()
-    {
-        Destroy(gameObject);
-    }
-    */
 
-    void OnCollisionEnter(){
-        Destroy(gameObject);
-    }
+   //void OnCollisionEnter(){
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+        //Destroy(gameObject); //Destroys Projectile
+    //}
 /*   
     private void OnBecameInvisible()
     {
