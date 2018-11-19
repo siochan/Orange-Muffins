@@ -21,12 +21,13 @@ public class Turret1 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("time = " + Time.time + " delay = " + delay);
+        //Debug.Log("time = " + Time.time + " delay = " + delay);
         if ( (int)(Time.time/delay) % shootDelayRatio != 1)
         {
             if (timeBtShots <= 0)
             {
-                Instantiate(projectile, transform.position, Quaternion.identity);
+                //Instantiate(projectile, transform.position, Quaternion.identity);
+                Instantiate(projectile, transform.position, transform.rotation);
                 timeBtShots = startTimeBtShots;
             }
             else
