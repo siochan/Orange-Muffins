@@ -9,29 +9,31 @@ public class Turret1 : MonoBehaviour
 
     private float timeBtShots;
     public float startTimeBtShots;
-
     public GameObject projectile;
-    //private Transform player;
+
+    public float delay;
+    public int shootDelayRatio;
 
     void Start()
     {
-       //player = GameObject.FindGameObjectWithTag("Player").transform;
-
         timeBtShots = startTimeBtShots;
     }
 
     void Update()
     {
-
-        if (timeBtShots <= 0)
+        //Debug.Log("time = " + Time.time + " delay = " + delay);
+        if ( (int)(Time.time/delay) % shootDelayRatio != 1)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBtShots = startTimeBtShots;
-
-        }
-        else
-        {
-            timeBtShots -= Time.deltaTime;
+            if (timeBtShots <= 0)
+            {
+                //Instantiate(projectile, transform.position, Quaternion.identity);
+                Instantiate(projectile, transform.position, transform.rotation);
+                timeBtShots = startTimeBtShots;
+            }
+            else
+            {
+                timeBtShots -= Time.deltaTime;
+            }
         }
 
     }

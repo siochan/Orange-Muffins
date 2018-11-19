@@ -9,47 +9,57 @@ public class TurretProjectile : MonoBehaviour
 
     public Transform target;
     private Vector2 direction;
+    Vector3 projectilePosition;
+    //
+    //private Vector3 normalizeDirection;
+    //
 
     void Start()
     {
-
-        //target = GameObject.FindGameObjectWithTag("Player").transform;
-
         direction = new Vector2(target.position.x, target.position.y);
+        Debug.Log("rotation = " + transform.rotation);
+        //
+        //normalizeDirection = (target.position - transform.position).normalized;
+        //
+        projectilePosition = transform.position;
     }
 
     void Update()
     {
+        //transform.position = Vector2.MoveTowards(transform.position, direction, speed * Time.deltaTime);
+        //transform.Translate(Vector3.up) * speed * Time.deltaTime);
+        transform.Translate(new Vector3(0, 1, 0) * speed * Time.deltaTime);
 
-        transform.position = Vector2.MoveTowards(transform.position, direction, speed * Time.deltaTime);
+        //T2//transform.position += normalizeDirection * speed * Time.deltaTime;
 
-        /*
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-            DestroyProjectile();
+
+        /* INPUT = DEGREES 
+        if (transform.rotation.z == 0){
+        transform.position += transform.position.y - 1;
         }
-        */
+         */
+        //projectilePosition.y += 1;
+
     }
 
-    /*
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            DestroyProjectile();
 
-        }
-    }
-
-    void DestroyProjectile()
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
-    }
-    */
 
-    void OnCollisionEnter(){
-        Destroy(gameObject);
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+
+        }
     }
+
+
+   //void OnCollisionEnter(){
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+        //Destroy(gameObject); //Destroys Projectile
+    //}
 /*   
     private void OnBecameInvisible()
     {
