@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour {
 	public int health; //the amount of health the player has, at 0 player dies
 
     private GameObject gameManager;
-    private LevelManager levelManager;
 
 	//public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
 	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
@@ -21,7 +20,6 @@ public class PlayerHealth : MonoBehaviour {
 	//Use this for initialization
 	void Start () {
         gameManager = GameObject.Find("GameManager");
-        levelManager = gameManager.GetComponent<LevelManager>();
 
 		health = startHealth;
 
