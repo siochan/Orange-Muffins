@@ -21,7 +21,7 @@ public class Sap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        playerObj = GameObject.Find("Player(Advance)");
+        playerObj = GameObject.Find("Player");
         player = playerObj.GetComponent<PlayerMove>();
         previousRunSpeed = player.runSpeed;
         slowDown = previousRunSpeed - reducedSpeed;        // currentSpeed - slowDown = reducedSpeed => slowDown = previousSpeed - reduced speed

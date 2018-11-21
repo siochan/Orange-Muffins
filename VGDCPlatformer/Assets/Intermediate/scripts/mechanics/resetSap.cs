@@ -12,7 +12,7 @@ public class resetSap : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        playerObj = GameObject.Find("Player(Advance)");
+        playerObj = GameObject.Find("Player");
         player = playerObj.GetComponent<CharacterController2D>();
         //previousAirJumps = player.m_AirJumps;
 

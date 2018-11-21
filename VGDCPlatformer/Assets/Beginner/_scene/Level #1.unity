@@ -162,7 +162,8 @@ Prefab:
       propertyPath: respawnText
       value: 
       objectReference: {fileID: 1620446777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3eff999d79623a749bc78f85e018de0c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &112924915
@@ -704,7 +705,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 932116531}
+  m_Follow: {fileID: 1430382325}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 4.6
@@ -888,10 +889,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1283767149882042, guid: ca245e6841e277446968158966a723a1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 1569310605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0
@@ -1086,7 +1088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &932116524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,6 +3124,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterRejectX: 20
   WaterRejectY: 25
+--- !u!1 &1430382316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283767149882042, guid: ca245e6841e277446968158966a723a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 687359721}
+--- !u!4 &1430382325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4724451580023610, guid: ca245e6841e277446968158966a723a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 687359721}
 --- !u!1 &1569310603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,7 +3327,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1640334368}
-  - component: {fileID: 1640334367}
   - component: {fileID: 1640334369}
   m_Layer: 0
   m_Name: GameManager
@@ -3324,21 +3335,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1640334367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114936285090211936, guid: 3eff999d79623a749bc78f85e018de0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 6131047}
-  m_GameObject: {fileID: 1640334366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71a38478c5622b438789b81a4dc4910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 932116523}
-  respawnText: {fileID: 1620446777}
-  sceneDelay: 0.2
 --- !u!4 &1640334368
 Transform:
   m_ObjectHideFlags: 0
@@ -3365,8 +3361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71a38478c5622b438789b81a4dc4910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  respawnText: {fileID: 0}
+  playerObject: {fileID: 1430382316}
+  respawnText: {fileID: 1620446777}
   sceneDelay: 0
 --- !u!1 &1649466302
 GameObject:
