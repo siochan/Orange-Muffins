@@ -42,28 +42,14 @@ public class TurretProjectile : MonoBehaviour
 
     }
 
-
+   //void OnCollisionEnter(Collision collision)
     void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
-
-        if (collision.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-
-        }
     }
 
-
-   //void OnCollisionEnter(){
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-        //Destroy(gameObject); //Destroys Projectile
-    //}
-/*   
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
-    }
-*/    
+    }   
 }
