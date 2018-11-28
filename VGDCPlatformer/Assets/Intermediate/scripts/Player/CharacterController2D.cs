@@ -27,12 +27,14 @@ public class CharacterController2D : MonoBehaviour {
     public bool m_Immune = false;
     private int m_AirJumpsLeft;
     private Vector3 m_Velocity = Vector3.zero;
+    //public Animator myAnimation;
 
 
     void Awake()
     {
 
         m_RigidBody2D = GetComponent<Rigidbody2D>();
+        //myAnimation = gameObject.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -63,7 +65,27 @@ public class CharacterController2D : MonoBehaviour {
             {
                 Flip();
             }
+            /* 
+            if(move != 0)
+            {
+                myAnimation.SetBool("running", true);
+            }
+            else
+            {
+                myAnimation.SetBool("running", false);
+            }
 
+            if(m_RigidBody2D.velocity.y > 0)
+            {
+                myAnimation.SetBool("jump_up", true);
+            }
+            else if (m_RigidBody2D.velocity.y < 0){
+                myAnimation.SetBool("jump_up", false);
+                myAnimation.SetBool("fall_down", true);
+            }
+            else if (m_RigidBody2D.velocity.y == 0){
+                myAnimation.SetBool("fall_down", false);
+            }*/
         }
 
         JumpGravity(jump);
