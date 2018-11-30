@@ -22,7 +22,7 @@ public class Turret1 : MonoBehaviour
     void Update()
     {
         //Debug.Log("time = " + Time.time + " delay = " + delay);
-        if ( (int)(Time.time/delay) % shootDelayRatio != 1)
+        if ( (int)(Time.time/delay) % shootDelayRatio != 1) //shoot delay ratio tells which position you instantiate
         {
             if (timeBtShots <= 0)
             {
