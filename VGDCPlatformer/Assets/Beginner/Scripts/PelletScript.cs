@@ -33,7 +33,7 @@ public class PelletScript : MonoBehaviour
 
         Destroy(gameObject);
 
-        if (collision.gameObject.tag == "hurtbox2")
+        if (collision.gameObject.tag == "hitbox")
         {
             // When shot at, kill the enemy
             TheEnemy enemy = collision.gameObject.GetComponentInParent<TheEnemy>();
