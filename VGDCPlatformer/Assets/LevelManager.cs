@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         respawnText.gameObject.SetActive(false);
+        respawnText.text = "Press \"R\" To Respawn";
 	}
 	
 	// Update is called once per frame
@@ -26,7 +27,7 @@ public class LevelManager : MonoBehaviour {
     public void reloadLevelOnInput()
     {
         respawnText.gameObject.SetActive(true);
-        if(Input.GetButton("Jump"))
+        if(Input.GetButton("Respawn"))
         {
             StartCoroutine(DelayReload(sceneDelay));
         }
