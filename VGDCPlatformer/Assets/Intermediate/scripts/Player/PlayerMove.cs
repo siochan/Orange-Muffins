@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour {
 
     [Header("Pickup HUD")]
     public Text countText;
+    public AudioClip pickupSound;
     public int muffinCount;
 
     [Header("Shoot Logic")]
@@ -19,8 +20,11 @@ public class PlayerMove : MonoBehaviour {
     public GameObject rightPellet;
     public GameObject leftPellet;
     public Transform firePos;
+    public AudioClip shootSound;
     public float fireRate = 0.5f;
     private float nextFire = 0;
+
+
 
     void Start()
     {
@@ -40,6 +44,7 @@ public class PlayerMove : MonoBehaviour {
         if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
+            AudioSource.PlayClipAtPoint(shootSound, transform.position);
             fire();
         }
     }
@@ -56,6 +61,7 @@ public class PlayerMove : MonoBehaviour {
         //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
         if (other.gameObject.CompareTag("Pickup"))
         {
+            AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             other.gameObject.SetActive(false);
             ++muffinCount;
             SetCountText();

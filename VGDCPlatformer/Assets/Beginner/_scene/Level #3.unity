@@ -2220,11 +2220,13 @@ MonoBehaviour:
   runSpeed: 40
   controller: {fileID: 980886562}
   countText: {fileID: 152327470}
+  pickupSound: {fileID: 0}
   muffinCount: 0
   rightPellet: {fileID: 1301729343323688, guid: 17f5d03e2b37b7143b93bfc779c80f99,
     type: 2}
   leftPellet: {fileID: 1242968481148856, guid: fcd8eb812c47adb4db804dffd6ea5715, type: 2}
   firePos: {fileID: 482913498}
+  shootSound: {fileID: 0}
   fireRate: 0.5
 --- !u!114 &980886562
 MonoBehaviour:
@@ -2249,10 +2251,12 @@ MonoBehaviour:
   m_HorizontalCheck: {fileID: 0}
   m_AirControl: 1
   m_JumpForceOnEnemies: 20
+  jumpSound: {fileID: 0}
   m_RigidBody2D: {fileID: 0}
   m_FacingRight: 1
   m_Damaged: 0
   m_Immune: 0
+  myAnimation: {fileID: 0}
 --- !u!50 &980886563
 Rigidbody2D:
   serializedVersion: 4
@@ -2330,6 +2334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 1
   health: 0
+  deathSound: {fileID: 0}
   SpawnPoint: {fileID: 592286230}
 --- !u!212 &980886567
 SpriteRenderer:
@@ -13220,6 +13225,26 @@ Prefab:
       propertyPath: countText
       value: 
       objectReference: {fileID: 152327470}
+    - target: {fileID: 114756675746613300, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27fe67f78065fc34d8cf5e46ac81a5a0, type: 3}
+    - target: {fileID: 114841253619162942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b656972fab0f34a48982b51d303f3135, type: 3}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 46949a31e946d5b478493e7029295cc5, type: 3}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a0132e2a220dd6a4e9a3621cfc533d98, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0
@@ -13684,6 +13709,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114144078457793932, guid: abe7fc5657f2e6f4f9583b1a79357216,
+        type: 2}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: f25976f768577ac46b5fa2b0e9bb13e7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe7fc5657f2e6f4f9583b1a79357216, type: 2}
   m_IsPrefabAsset: 0

@@ -42352,6 +42352,11 @@ Prefab:
       propertyPath: nextSceneToLoad
       value: 'Level #5'
       objectReference: {fileID: 0}
+    - target: {fileID: 114144078457793932, guid: abe7fc5657f2e6f4f9583b1a79357216,
+        type: 2}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: f25976f768577ac46b5fa2b0e9bb13e7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe7fc5657f2e6f4f9583b1a79357216, type: 2}
   m_IsPrefabAsset: 0
@@ -46207,6 +46212,21 @@ Prefab:
       propertyPath: countText
       value: 
       objectReference: {fileID: 608797159}
+    - target: {fileID: 114756675746613300, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27fe67f78065fc34d8cf5e46ac81a5a0, type: 3}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a0132e2a220dd6a4e9a3621cfc533d98, type: 3}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 46949a31e946d5b478493e7029295cc5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0

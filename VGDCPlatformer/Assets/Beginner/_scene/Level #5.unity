@@ -1037,10 +1037,12 @@ MonoBehaviour:
   m_HorizontalCheck: {fileID: 0}
   m_AirControl: 1
   m_JumpForceOnEnemies: 20
+  jumpSound: {fileID: 0}
   m_RigidBody2D: {fileID: 0}
   m_FacingRight: 1
   m_Damaged: 0
   m_Immune: 0
+  myAnimation: {fileID: 0}
 --- !u!50 &980886563
 Rigidbody2D:
   serializedVersion: 4
@@ -3408,6 +3410,11 @@ Prefab:
       propertyPath: countText
       value: 
       objectReference: {fileID: 1354488031}
+    - target: {fileID: 114756675746613300, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27fe67f78065fc34d8cf5e46ac81a5a0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0

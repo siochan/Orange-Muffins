@@ -17,7 +17,7 @@ public class CharacterController2D : MonoBehaviour {
     //[SerializeField] public int m_WaterRejectX = 20;
     //[SerializeField] public int m_WaterRejectY = 5;
 
-
+    public AudioClip jumpSound;
 
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
     private bool m_Grounded;
@@ -111,6 +111,7 @@ public class CharacterController2D : MonoBehaviour {
 
         if (jump && m_AirJumpsLeft >= 1)
         {
+            AudioSource.PlayClipAtPoint(jumpSound, transform.position, 0.25f);
 
             m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, 0);
         }

@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour {
 
     private GameObject gameManager;
 
+    public AudioClip deathSound;
+
 	//public float playerSpawnX = -17.3f; //where the player spawns at start or death, X coord
 	//public float playerSpawnY = -1.9f; //where the player spawns at start or death, Y coord
 
@@ -59,6 +61,7 @@ public class PlayerHealth : MonoBehaviour {
 		//player dies here
 		if (health <= 0)
 		{
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
             gameObject.SetActive(false);    // kills player
         }
 	}
