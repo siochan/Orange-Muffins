@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.75
+  speed: 6.75
   range: 10
 --- !u!212 &9754614
 SpriteRenderer:
@@ -21264,7 +21264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &364391627
 SpriteRenderer:
@@ -22636,7 +22636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.75
+  speed: 6.75
   range: 10
 --- !u!212 &455184848
 SpriteRenderer:
@@ -22915,7 +22915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &479972670
 SpriteRenderer:
@@ -23152,7 +23152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 10
 --- !u!212 &505676612
 SpriteRenderer:
@@ -23915,7 +23915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 10
 --- !u!212 &579429481
 SpriteRenderer:
@@ -26609,7 +26609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &967508310
 SpriteRenderer:
@@ -45016,7 +45016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &1099574276
 SpriteRenderer:
@@ -45546,6 +45546,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 114144078457793932, guid: abe7fc5657f2e6f4f9583b1a79357216,
+        type: 2}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: 4af0ae0df40ade44a8a7bebb13ad1dfd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe7fc5657f2e6f4f9583b1a79357216, type: 2}
   m_IsPrefabAsset: 0
@@ -45780,7 +45785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 9
 --- !u!212 &1186666012
 SpriteRenderer:
@@ -46565,6 +46570,101 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!82 &1298296517
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1298296512}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8034211a892d1224d9bebfec5860d814, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 160
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1318586695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1009107803040676, guid: 16fcd028eca9ad24c9edf34f2bc824fe,
@@ -46656,7 +46756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -49492,7 +49592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &1862779705
 SpriteRenderer:
@@ -49734,7 +49834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &1907837387
 SpriteRenderer:
@@ -50542,6 +50642,11 @@ Prefab:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: b656972fab0f34a48982b51d303f3135, type: 3}
+    - target: {fileID: 114732015578524942, guid: ca245e6841e277446968158966a723a1,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 46949a31e946d5b478493e7029295cc5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca245e6841e277446968158966a723a1, type: 2}
   m_IsPrefabAsset: 0
@@ -51333,7 +51438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60c21b1c3dd02c429bec44f7e532b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   range: 8
 --- !u!212 &2141482367
 SpriteRenderer:

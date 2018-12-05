@@ -20,7 +20,6 @@ public class PlayerMove : MonoBehaviour {
     public GameObject rightPellet;
     public GameObject leftPellet;
     public Transform firePos;
-    public AudioClip shootSound;
     public float fireRate = 0.5f;
     private float nextFire = 0;
 
@@ -44,7 +43,6 @@ public class PlayerMove : MonoBehaviour {
         if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            AudioSource.PlayClipAtPoint(shootSound, transform.position);
             fire();
         }
     }
