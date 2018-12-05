@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fc02a3d83bf8d44b072c415a8554c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneToLoad: Sean Scene
 --- !u!212 &212016425320871884
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -104,14 +103,14 @@ SpriteRenderer:
   m_SortingLayerID: 772384465
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53ab992095ac57b41be383bf070d4787, type: 3}
-  m_Color: {r: 1, g: 0.7534226, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: cd8a78f64e57c4b44a70b8f823f283be, type: 3}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

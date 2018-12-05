@@ -8,6 +8,7 @@ public class LevelPickupScript : MonoBehaviour
     private int sceneIndex;
     private int count;
     private int mod;
+    public AudioClip success;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class LevelPickupScript : MonoBehaviour
         //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioSource.PlayClipAtPoint(success, transform.position);
             mod = 0;
             StartCoroutine(NextLevel()); 
         }
